@@ -1,0 +1,95 @@
+.form {
+  padding: 40px;
+  &__login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  &__wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__wrap-field {
+    display: flex;
+    flex-direction: column;
+  }
+  &__password-icon,
+  &__username-icon {
+    width: 57px;
+    height: 57px;
+    margin-right: 20px;
+
+    background-color: #798a9e;
+    background-image: url("../images/password.png");
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border-radius: 50px;
+    cursor: pointer;
+    transform: translateY(20%);
+  }
+  &__input {
+    font-family: "Open sans", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+
+    height: 57px;
+    width: 422px;
+    padding: 18px;
+    margin-bottom: 20px;
+
+    color: #2c3d59;
+    border: none;
+    outline: none;
+    box-shadow: 0.1px 3px 7px 1px rgba(34, 60, 80, 0.2);
+  }
+  &__label-text {
+    font-family: "Open sans", sans-serif;
+    font-size: 20px;
+    color: #8292a4;
+    margin-bottom: 13px;
+  }
+  &__wrap-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__button {
+    font-family: "Open sans", sans-serif;
+    font-size: 20px;
+
+    width: 160px;
+    height: 57px;
+    border-radius: 50px;
+    border: none;
+
+    color: #fff;
+    background-color: #798a9e;
+    box-shadow: 0.1px 3px 7px 1px rgba(34, 60, 80, 0.2);
+    cursor: pointer;
+
+    margin-right: 40px;
+    transition: opacity 0.2s linear;
+    &:hover,
+    &:active {
+      opacity: 0.9;
+      outline: none;
+    }
+  }
+  &__link {
+    font-family: "Open sans", sans-serif;
+    font-size: 20px;
+    line-height: 20px;
+    color: #7e8a9c;
+
+    text-decoration: underline;
+    transform: translateX(45%);
+    transition: opacity 0.2s linear;
+    &:hover {
+      color: #7e8a9c;
+      opacity: 0.8;
+    }
+  }
+}
