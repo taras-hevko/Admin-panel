@@ -1,0 +1,30 @@
+.header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 500px;
+  padding: 40px;
+
+  background-image: linear-gradient(to right, rgba(162, 200, 232, 0.8), rgba(142, 182, 215, 0.8)), url("../images/hero.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  &__logo {
+    margin-bottom: 30px;
+  }
+  &__title {
+    font-family: "Geometria", sans-serif;
+    font-size: 69px;
+    text-transform: uppercase;
+
+    color: #fff;
+  }
+  &__subtitle {
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    color: #fff;
+  }
+}

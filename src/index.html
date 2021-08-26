@@ -4,10 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title</title>
-    <link rel="stylesheet" href="./styles.less">
+    <link rel="stylesheet" href="./styles/main.less">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
   </head>
   <body>
-    <h1>Hello Mate Academy</h1>
-    <script type="text/javascript" src="scripts/main.js"></script>
+    <header class="header">
+      <img
+        src="./images/logo.png"
+        alt="Logo"
+        class="header__logo"
+      >
+      <h1 class="header__title">
+        Welcome to tinbucktwo
+      </h1>
+      <p class="header__subtitle">
+        Administrative Panel
+      </p>
+    </header>
+    <section class="form">
+      <form>
+        <div class="">
+          <label for="username">Username</label>
+          <input
+            type="text"
+            class="form-control"
+            id="username"
+          >
+        </div>
+        <div class="">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+          >
+        </div>
+        <div class="">
+          <button type="submit" class="">
+            Log in
+          </button>
+        </div>
+      </form>
+    </section>
   </body>
 </html>
