@@ -12,6 +12,7 @@
     align-items: center;
   }
   &__wrap-field {
+    position: relative;
     display: flex;
     flex-direction: column;
   }
@@ -21,7 +22,7 @@
     height: 57px;
     margin-right: 20px;
 
-    background-color: #798a9e;
+    background-color: @color-grey;
     background-image: url("../images/password.png");
     background-position: center;
     background-repeat: no-repeat;
@@ -45,10 +46,54 @@
     outline: none;
     box-shadow: 0.1px 3px 7px 1px rgba(34, 60, 80, 0.2);
   }
+  &__username::after {
+    content: "";
+    position: absolute;
+    bottom: 25%;
+    right: 2%;
+    width: 40px;
+    height: 40px;
+
+    background: url("../images/input-true.png"), no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    cursor: pointer;
+  }
+
+  &__password::before {
+    content: "";
+    position: absolute;
+    bottom: 30%;
+    right: 0;
+    margin-right: 55px;
+    width: 35px;
+    height: 27px;
+
+    background: url("../images/password-input-icon.png"), no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    cursor: pointer;
+  }
+  &__password::after {
+    content: "";
+    position: absolute;
+    bottom: 25%;
+    right: 2%;
+    width: 40px;
+    height: 40px;
+
+    background: url("../images/input-false.png"), no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    cursor: pointer;
+  }
   &__label-text {
     font-family: "Open sans", sans-serif;
     font-size: 20px;
-    color: #8292a4;
+    color: @color-grey;
     margin-bottom: 13px;
   }
   &__wrap-buttons {
@@ -59,14 +104,14 @@
   &__button {
     font-family: "Open sans", sans-serif;
     font-size: 20px;
-
+    line-height: 1.2;
     width: 160px;
     height: 57px;
     border-radius: 50px;
     border: none;
 
     color: #fff;
-    background-color: #798a9e;
+    background-color: @color-grey;
     box-shadow: 0.1px 3px 7px 1px rgba(34, 60, 80, 0.2);
     cursor: pointer;
 
@@ -82,14 +127,35 @@
     font-family: "Open sans", sans-serif;
     font-size: 20px;
     line-height: 20px;
-    color: #7e8a9c;
+    color: @color-grey;
 
     text-decoration: underline;
     transform: translateX(45%);
     transition: opacity 0.2s linear;
     &:hover {
-      color: #7e8a9c;
+      color: @color-grey;
       opacity: 0.8;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .form {
+    padding: 40px 10px 20px;
+    &__input {
+      width: 270px;
+    }
+    &__link {
+      font-size: 15px;
+      transform: translateX(0);
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .form {
+    &__input {
+      width: 200px;
     }
   }
 }
